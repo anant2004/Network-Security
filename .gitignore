@@ -1,0 +1,56 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+#notebooks
+.notebooks/
+
+# Packaging / build outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+*.whl
+
+# Testing and tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Machine learning / data artifacts
+artifacts/
+outputs/
+checkpoints/
+models/
+mlruns/
+wandb/
+logs/
+*.log
+
+# Local data and secrets
+Network_Data/
+.env
+.env.*
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
