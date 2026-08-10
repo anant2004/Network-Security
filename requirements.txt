@@ -8,3 +8,5 @@ xgboost
 dill
 flask
 python-dotenv
+setuptools
+#-e .
