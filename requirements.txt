@@ -9,4 +9,6 @@ dill
 flask
 python-dotenv
 setuptools
+pymongo[srv]
+pymongo
 #-e .
