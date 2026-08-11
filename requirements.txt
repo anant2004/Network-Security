@@ -11,4 +11,5 @@ python-dotenv
 setuptools
 pymongo[srv]
 pymongo
+certifi
 #-e .
