@@ -12,4 +12,6 @@ setuptools
 pymongo[srv]
 pymongo
 certifi
+dill
+PyYAML
 #-e .
