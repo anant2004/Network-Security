@@ -40,6 +40,8 @@ outputs/
 checkpoints/
 models/
 mlruns/
+mlartifacts/
+mlflow.db
 wandb/
 logs/
 log/

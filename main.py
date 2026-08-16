@@ -3,9 +3,14 @@ from networksecurity.logging.logger import logging
 from networksecurity.components.data_validation import DataValidation
 from networksecurity.components.data_ingestion import DataIngestionArtifact
 from networksecurity.components.data_transformation import DataTransformation
+from networksecurity.components.model_trainer import ModelTrainer
 from networksecurity.exception.exception import CustomException
-from networksecurity.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from networksecurity.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
 from networksecurity.entity.config_entity import TrainingPipelineConfig
+import mlflow
+
+mlflow.set_tracking_uri("http://127.0.0.1:8000")
+mlflow.set_experiment("network_security_project")
 
 if __name__ == "__main__":
     try:
@@ -31,6 +36,12 @@ if __name__ == "__main__":
         data_transformation_artifact = data_transformation.initiate_data_transformation()
         print(data_validation_artifact)
         logging.info("data transformation completed")
+
+        logging. info("Model.Training sstared")
+        model_trainer_config=ModelTrainerConfig(training_pipeline_config)
+        model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,data_transformation_artifact=data_transformation_artifact)
+        model_trainer_artifact=model_trainer.initiate_model_training()
+        logging. info("Model.Training artifact created")
 
     except Exception as e:
         raise CustomException(e)
