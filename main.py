@@ -7,10 +7,6 @@ from networksecurity.components.model_trainer import ModelTrainer
 from networksecurity.exception.exception import CustomException
 from networksecurity.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
 from networksecurity.entity.config_entity import TrainingPipelineConfig
-import mlflow
-
-mlflow.set_tracking_uri("http://127.0.0.1:8000")
-mlflow.set_experiment("network_security_project")
 
 if __name__ == "__main__":
     try:

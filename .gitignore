@@ -35,6 +35,8 @@ htmlcov/
 
 # Machine learning / data artifacts
 Artifacts/
+prediction_output/
+valid_data/
 artifacts/
 outputs/
 checkpoints/
